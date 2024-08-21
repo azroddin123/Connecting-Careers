@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Connecting Careers",
+  "name": "Connecting Careers",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "connecting-careers-final-logo04-1@2x.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "connecting-careers-final-logo04-1@2x.png",
       "type": "image/png",
       "sizes": "512x512"
     }
