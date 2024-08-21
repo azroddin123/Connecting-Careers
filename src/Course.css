@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
+    position: relative;
 }
 
 .firstheading {
@@ -42,6 +43,7 @@
     max-width: 400px;
     height: 380px !important;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .course-normal-heading {
@@ -115,14 +117,14 @@
 }
 
 .swiper-pagination-bullet {
-    background-color: #007bff;
+    background-color: red;
     /* Bullet color */
     opacity: 1;
     /* Full opacity */
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #0056b3;
+    background-color: black;
     /* Active bullet color */
 }
 
@@ -147,10 +149,51 @@
 
 .course-card:hover .hover-image {
     opacity: 1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     /* Show the image on hover */
 }
+
 @media (max-width: 767.98px) {
-    .course-card{
+    .course-card {
         height: 460px !important;
     }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    /* Center the buttons vertically */
+    transform: translateY(-50%);
+    z-index: 10;
+    color: #333;
+    cursor: pointer;
+    font-size: 24px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-button-prev {
+    left: 10px;
+    /* Position the previous button to the left */
+}
+
+.swiper-button-next {
+    right: 10px;
+    /* Position the next button to the right */
+}
+
+/* Add some hover effects for better UX */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: #f0f0f0;
+}
+
+.button-container {
+    position: absolute;
+    left: 43%;
+    bottom: 0;
+    overflow: hidden;
 }

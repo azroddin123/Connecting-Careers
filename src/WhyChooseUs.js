@@ -47,7 +47,7 @@ const WhyChooseUs = () => {
 
   return (
     <>
-      <Container fluid className="why-choose-us-main">
+      <Container fluid className="why-choose-us-main mt-5">
         <Container className="why-choose-us-content">
           <Row>
             <div className="mb-5">

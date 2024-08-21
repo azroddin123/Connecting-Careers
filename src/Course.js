@@ -3,10 +3,22 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./Course.css";
-import { Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import { Container, Button } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const Course = () => {
+  const navigate = useNavigate();
+
+  const handleNav = () => {
+    navigate("/allcourses");
+    window.scroll(0, 0);
+  };
   return (
     <>
       <div className="py-5 mt-3">
@@ -20,19 +32,19 @@ const Course = () => {
       </div>
       <Container fluid className="course-container">
         <Container>
+          <div className="swiper-button-prev">
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </div>
           <Swiper
             breakpoints={{
-              // when window width is >= 640px
               640: {
                 slidesPerView: 1,
                 spaceBetween: 10,
               },
-              // when window width is >= 768px
               768: {
                 slidesPerView: 2,
                 spaceBetween: 20,
               },
-              // when window width is >= 1024px
               1024: {
                 slidesPerView: 3,
                 spaceBetween: 30,
@@ -41,7 +53,11 @@ const Course = () => {
             pagination={{
               clickable: true,
             }}
-            modules={[Pagination]}
+            navigation={{
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            }}
+            modules={[Pagination, Navigation]}
             className="mySwiper mt-5"
           >
             <SwiperSlide>
@@ -294,6 +310,15 @@ const Course = () => {
             </SwiperSlide>
             {/* Add more SwiperSlide components as needed */}
           </Swiper>
+
+          <div className="swiper-button-next">
+            <FontAwesomeIcon icon={faChevronRight} />
+          </div>
+          <div className="button-container">
+            <Button className="btn custom-btn" onClick={() => handleNav()}>
+              View All Courses
+            </Button>
+          </div>
         </Container>
       </Container>
     </>
