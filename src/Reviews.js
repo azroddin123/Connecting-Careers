@@ -15,7 +15,7 @@ const Reviews = () => {
     {
       id: 2,
       image: "/WhatsApp Image 2024-08-14 at 7.51.47 PM.jpeg",
-      name: "Siddhi Dhapokar",
+      name: "Siddhi Dhapodkar",
       description:
         "Great experience! Immi sir and the team are excellent. Thanks to their training and placement support. Highly recommended!",
       rating: 4,
